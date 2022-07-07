@@ -4,7 +4,6 @@ def wait():
     
 
 print('hello Dominic!')
-=======
 print('hello world!')
 blob = input('what\'s your name? ')
 print('Hello, ' + blob + '!')
