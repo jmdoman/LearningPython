@@ -14,7 +14,7 @@ def rectangle(horizontal,vertical,color):
     t.penup()
 
 t.penup()
-t.speed('slowest')
+t.speed('fast')
 t.bgcolor('Dodger blue')
 
 #feet

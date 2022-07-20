@@ -1,3 +1,7 @@
+import msvcrt as m
+def wait():
+    m.getch()
+
 import random
 print('WHO\'S THAT POKEMON??')
 difficulty = input('Choose a difficulty (type 1, 2, or 3):\n 1 Easy\n 2 Normal \n 3 Hard\n')
@@ -54,3 +58,4 @@ if guessed_word_correctly:
 else:
     print('You lose! the pokemon was ' + secret_word + '!')
         
+wait()
