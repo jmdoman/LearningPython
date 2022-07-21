@@ -1,0 +1,6 @@
+import msvcrt as m
+def wait():
+    m.getch()
+age = 10
+
+wait()
