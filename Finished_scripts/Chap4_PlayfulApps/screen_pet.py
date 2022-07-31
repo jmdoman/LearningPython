@@ -22,6 +22,8 @@ def show_happy(event):
         c.itemconfigure(mouth_happy, state=NORMAL)
         c.itemconfigure(mouth_normal, state=HIDDEN)
         c.itemconfigure(mouth_sad, state=HIDDEN)
+        c.happy_level = 10
+        print('happy level = ' + str(c.happy_level))
     return
 
 def hide_happy(event):
@@ -59,6 +61,17 @@ def cheeky(event):
     root.after(1000, toggle_pupils)
     return
 
+def sad():
+    if c.happy_level == 0:
+        c.itemconfigure(mouth_happy, state=HIDDEN)
+        c.itemconfigure(mouth_normal, state=HIDDEN)
+        c.itemconfigure(mouth_sad, state=NORMAL)
+    else:
+        c.happy_level -= 1
+        print('happy level = ' + str(c.happy_level))
+    root.after(5000, sad)
+        
+
 root = Tk()
 c = Canvas(root, width=400, height=400)
 c.configure(bg='dark blue', highlightthickness=0)
@@ -83,9 +96,11 @@ c.pack()
 c.bind('<Motion>', show_happy)
 c.bind('<Leave>', hide_happy)
 c.bind('<Double-1>', cheeky)
+c.happy_level = 10
+print('happy level = ' + str(c.happy_level))
 c.eyes_crossed = False
 c.tongue_out = False
-root.after(5000, blink)
-
+root.after(1000, blink)
+root.after(5000, sad)
 
 root.mainloop()
