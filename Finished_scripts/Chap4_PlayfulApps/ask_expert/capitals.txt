@@ -1,0 +1,11 @@
+India/New Dehli
+China/Beijing
+France/Paris
+Germany/Berlin
+Argentia/Buenos Aires
+Egypt/Cairo
+Great Britain/London
+USA/Washington, DC
+Mexico/Mexico City
+Russia/Moscow
+Canada/Ottawa

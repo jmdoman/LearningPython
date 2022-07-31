@@ -27,6 +27,7 @@ c.create_text(100, 50, anchor='w', fill='orange', \
 events = get_events()
 today = date.today()
 vertical_space = 100
+events.sort(key=lambda x: x[1])
 
 for event in events:
     event_name = event[0]
