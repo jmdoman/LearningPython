@@ -69,5 +69,46 @@ while answer == 'y':
     hippos = hippos + 1
     print(str(hippos) + ' balancing hippos!')
     answer = input('add anotheer hippo? (y/n)')
-                   
-    
+while True:
+    answer = input('are you bored yet?  (y/n)')
+    if answer == 'y':
+        print('how rude!')
+        break
+for hooray_counter in range(1, 4):
+    for hip_counter in range(1, 3):
+        print('Hip')
+    print('Hooray!')
+def check_guess(guess, answer):
+    global score
+    still_guessing = True
+    attempt = 0
+    while still_guessing and attempt < 3:
+        if guess.lower() == answer.lower():
+            print('Correct answer')
+            score = score + 2 - attempt
+            still_guessing = False
+        else:
+            if attempt < 1:
+                guess = input('Sorry wrong answer. Try again. ')
+            attempt = attempt + 1
+    if attempt == 3:
+        print('the correct answer is  ' + answer)
+score = 0
+print('guess the animal!')
+guess1 = input('which bear lives at the North Pole? ')
+check_guess(guess1, 'polar bear')
+guess2 = input('which is the fastest land animal? ')
+check_guess(guess2, 'cheetah')
+guess3 = input('which is the lagest animal? ')
+check_guess(guess3, 'blue whale')
+guess4 = input('which one of these is a fish?\n \
+A) whale\n B) dolphin\n C) shark\n D) squid\n \
+type A, B, C, or D ')
+check_guess(guess4, 'C')       
+print('Your score is ' + str(score))
+name = input('what is your name?')
+greeting =  'Hello ' + name
+print(greeting)
+max(10, 16, 30, 25, 21, 28)
+
+
