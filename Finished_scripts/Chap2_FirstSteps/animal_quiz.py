@@ -1,8 +1,3 @@
-
-import msvcrt as m
-def wait():
-    m.getch()
-    
 def check_guess(guess,answer):
     global score
     still_guessing = True
@@ -50,6 +45,5 @@ elif score < questions: #no questions right at all
     print('Very silly!')
 
     
-wait()
 
 
